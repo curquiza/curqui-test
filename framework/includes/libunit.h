@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 11:54:39 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 18:32:36 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/13 19:50:54 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,40 +30,41 @@
 ** Structures
 */
 
-typedef struct	s_test
+typedef struct		s_test
 {
 	char			name[MAX_NAME_LEN + 1];
 	int				sigret;
 	int				success;
 	int				(*fct)(void);
 	struct s_test	*next;
-}				t_test;
+}					t_test;
 
-typedef struct	s_score
+typedef struct		s_score
 {
 	char			name[MAX_NAME_LEN + 1];
 	int				success;
 	int				total;
 	struct s_score	*next;
-}				t_score;
+}					t_score;
 
 /*
 ** Functions
 */
 
-void		ft_load_test(t_test **test, char *name, int (*f)(void));
-int			ft_launch_tests(t_test **test, int *success, int *total);
+void				ft_load_test(t_test **test, char *name, int (*f)(void));
+int					ft_launch_tests(t_test **test, int *success, int *total);
 
-void		ft_del_testlst(t_test **test);
-void		ft_del_scorelst(t_score **score);
+void				ft_del_testlst(t_test **test);
+void				ft_del_scorelst(t_score **score);
 
-void		ft_connect_stdout(int *pfd, int *save);
-char		*ft_get_stdout(int *pfd, int *save);
+void				ft_connect_stdout(int *pfd, int *save);
+char				*ft_get_stdout(int *pfd, int *save);
 
-void		ft_save_score(t_score **score, char *name, int succes, int total);
-int			ft_get_final_score(t_score **score);
+void				ft_save_score(t_score **score, char *name, int succes,
+																int total);
+int					ft_get_final_score(t_score **score);
 
-void		ft_putrslt(t_test *test);
-void		ft_putnbrtests(int cnt_success, int cnt_total);
+void				ft_putrslt(t_test *test);
+void				ft_putnbrtests(int cnt_success, int cnt_total);
 
 #endif
