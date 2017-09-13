@@ -284,19 +284,15 @@ OBJ = $(SRC:%.c=%.o)
 UNIT_DIR = framework
 UNIT = $(UNIT_DIR)/libunit.a
 
-PROJ_DIR = ..
-PROJ = $(PROJ_DIR)/libftprintf.a
+PROJ = libftprintf.a
 
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
 INCL_FLAG = -I includes -I $(LIBFT_DIR)/includes -I $(UNIT_DIR)/includes -I $(PROJ_DIR)/includes
-LIB_FLAG = -L$(PROJ_DIR) -lftprintf -L$(UNIT_DIR) -lunit -L$(LIBFT_DIR) -lft
+LIB_FLAG = -L. -lftprintf -L$(UNIT_DIR) -lunit -L$(LIBFT_DIR) -lft
 
 all : $(NAME)
-
-$(PROJ) :
-	@make -C $(PROJ_DIR)
 
 $(LIBFT) :
 	@make -C $(LIBFT_DIR)
@@ -306,7 +302,7 @@ $(UNIT) :
 	@#echo "\033[1;31m-- CURQUITEST OBJ --------------\033[0m"
 	@echo "Be patient... ;)"
 
-$(NAME) : $(PROJ) $(LIBFT) $(UNIT) $(OBJ)
+$(NAME) : $(LIBFT) $(UNIT) $(OBJ)
 	@$(CC) $(OBJ) -o $@ $(LIB_FLAG)
 	@echo "\033[1;31m-- CURQUITEST EXEC -------------\033[0m"
 	@printf  "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
