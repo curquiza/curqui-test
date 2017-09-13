@@ -260,24 +260,6 @@ SRC = $(addprefix main/, \
 	  a10_padding_02.c \
 	  a11_padding_03.c \
 	  a12_all_01.c) \
-	  $(addprefix conv_b/, \
-	  a00_launcher.c \
-	  a01_basic_01.c \
-	  a02_basic_02.c \
-	  a03_basic_03.c \
-	  a04_basic_04.c \
-	  a05_basic_05.c \
-	  a06_basic_06.c \
-	  a07_modifiers_01.c \
-	  a08_modifiers_02.c \
-	  a09_modifiers_03.c \
-	  a10_modifiers_04.c \
-	  a11_modifiers_05.c \
-	  a12_modifiers_06.c \
-	  a13_padding_01.c \
-	  a14_padding_02.c \
-	  a15_padding_03.c \
-	  a16_padding_04.c) \
 
 OBJ = $(SRC:%.c=%.o)
 
@@ -302,7 +284,7 @@ $(UNIT) :
 	@#echo "\033[1;31m-- CURQUITEST OBJ --------------\033[0m"
 	@echo "Be patient... ;)"
 
-$(NAME) : $(LIBFT) $(UNIT) $(OBJ)
+$(NAME) : $(PROJ) $(LIBFT) $(UNIT) $(OBJ)
 	@$(CC) $(OBJ) -o $@ $(LIB_FLAG)
 	@echo "\033[1;31m-- CURQUITEST EXEC -------------\033[0m"
 	@printf  "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_score.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/13 19:48:08 by curquiza          #+#    #+#             */
+/*   Updated: 2017/09/13 19:48:17 by curquiza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libunit.h"
 
-static void	ft_put_one_score(char *name, int success, int total, char *col)
+static void		ft_put_one_score(char *name, int success, int total, char *col)
 {
 	int		i;
 
