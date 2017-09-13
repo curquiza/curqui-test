@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   del_lst.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/13 19:47:15 by curquiza          #+#    #+#             */
+/*   Updated: 2017/09/13 19:47:20 by curquiza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libunit.h"
 
 void	ft_del_testlst(t_test **test)
@@ -10,7 +22,6 @@ void	ft_del_testlst(t_test **test)
 	{
 		supp = tmp;
 		tmp = tmp->next;
-		//ft_strdel(&supp->name);
 		free(supp);
 	}
 }
@@ -25,7 +36,6 @@ void	ft_del_scorelst(t_score **score)
 	{
 		supp = tmp;
 		tmp = tmp->next;
-		//ft_strdel(&supp->name);
 		free(supp);
 	}
 }

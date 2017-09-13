@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   save_score.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/13 19:48:28 by curquiza          #+#    #+#             */
+/*   Updated: 2017/09/13 19:48:30 by curquiza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libunit.h"
 
-static void	ft_scoreadd_back(t_score **alst, t_score *new)
+static void		ft_scoreadd_back(t_score **alst, t_score *new)
 {
 	t_score	*tmp;
 
@@ -35,7 +47,8 @@ static t_score	*ft_newscore(char *name, int success, int total)
 	return (new);
 }
 
-void	ft_save_score(t_score **score, char *name, int success, int total)
+void			ft_save_score(t_score **score, char *name, int success,
+															int total)
 {
 	ft_scoreadd_back(score, ft_newscore(name, success, total));
 }

@@ -6,13 +6,13 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 13:35:40 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 18:32:57 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/13 19:47:55 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-void	ft_ret_analysis(t_test *test, int status)
+static void	ft_ret_analysis(t_test *test, int status)
 {
 	if (WIFEXITED(status))
 	{
@@ -49,7 +49,7 @@ static void	ft_fork_and_exec(t_test *tmp)
 	}
 }
 
-int		ft_launch_tests(t_test **test, int *success, int *total)
+int			ft_launch_tests(t_test **test, int *success, int *total)
 {
 	t_test	*tmp;
 	int		cnt_success;
