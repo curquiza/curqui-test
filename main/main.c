@@ -14,8 +14,7 @@ static void	ft_init_ftab(int (**f)(int *, int *))
 	f[9] = &conv_p_launcher;
 	f[10] = &percent_launcher;
 	f[11] = &mixed_launcher;
-	f[12] = &conv_b_launcher;
-	f[13] = NULL;
+	f[12] = NULL;
 }
 
 static void	ft_init_test_name(char **tab)
@@ -32,8 +31,7 @@ static void	ft_init_test_name(char **tab)
 	tab[9] = ft_strdup("Conv p");
 	tab[10] = ft_strdup("Percent");
 	tab[11] = ft_strdup("Mixed tests");
-	tab[12] = ft_strdup("Bonus - Conv b");
-	tab[13] = NULL;
+	tab[12] = NULL;
 }
 
 static void	ft_run_tests(t_score **score, int (**f)(int *, int *), char **name)

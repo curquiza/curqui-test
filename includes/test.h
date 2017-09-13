@@ -6,7 +6,7 @@
 # include <wchar.h>
 # include <locale.h>
 
-# define NB_TEST_TYPE 14
+# define NB_TEST_TYPE 13
 
 typedef struct	s_data
 {
@@ -30,6 +30,5 @@ int		conv_x_bigx_launcher(int *success, int *total);
 int		conv_o_bigo_launcher(int *success, int *total);
 int		percent_launcher(int *success, int *total);
 int		mixed_launcher(int *success, int *total);
-int		conv_b_launcher(int *success, int *total);
 
 #endif
