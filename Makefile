@@ -284,7 +284,7 @@ $(UNIT) :
 	@#echo "\033[1;31m-- CURQUITEST OBJ --------------\033[0m"
 	@echo "Be patient... ;)"
 
-$(NAME) : $(LIBFT) $(UNIT) $(OBJ)
+$(NAME) : $(PROJ) $(LIBFT) $(UNIT) $(OBJ)
 	@$(CC) $(OBJ) -o $@ $(LIB_FLAG)
 	@echo "\033[1;31m-- CURQUITEST EXEC -------------\033[0m"
 	@printf  "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
