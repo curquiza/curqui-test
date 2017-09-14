@@ -1,4 +1,4 @@
-NAME = curquitest
+NAME = ft_printf_tests
 
 #CC = gcc
 CC = gcc -Wall -Wextra -Werror
