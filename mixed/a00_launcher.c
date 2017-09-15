@@ -11,5 +11,6 @@ int		mixed_launcher(int *success, int *total)
 	ft_load_test(&test, "test_02", &mix_test_02);
 	ft_load_test(&test, "test_03", &mix_test_03);
 	ft_load_test(&test, "test_04", &mix_test_04);
+	ft_load_test(&test, "test_05", &mix_test_05);
 	return(ft_launch_tests(&test, success, total));
 }

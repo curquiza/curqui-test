@@ -245,7 +245,8 @@ SRC = $(addprefix main/, \
 	  a01_test_01.c \
 	  a02_test_02.c \
 	  a03_test_03.c \
-	  a04_test_04.c) \
+	  a04_test_04.c \
+	  a05_test_05.c) \
 	  $(addprefix percent/, \
 	  a00_launcher.c \
 	  a01_basic_01.c \
