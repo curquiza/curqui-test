@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 19:52:17 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 19:52:30 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/20 16:22:52 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int			main(void)
 	char	*test_name[NB_TEST_TYPE + 1];
 	t_score	*score;
 
+	score = NULL;
 	ft_init_ftab(f);
 	ft_init_test_name(test_name);
 	ft_putendl("");
