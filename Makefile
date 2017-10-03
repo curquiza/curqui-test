@@ -273,7 +273,7 @@ LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
 INCL_FLAG = -I includes -I $(LIBFT_DIR)/includes -I $(UNIT_DIR)/includes -I $(PROJ_DIR)/includes
-LIB_FLAG = -L. -lftprintf -L$(UNIT_DIR) -lunit -L$(LIBFT_DIR) -lft
+LIB_FLAG = -L. -lftprintf -L$(UNIT_DIR) -lunit
 
 all : $(NAME)
 
@@ -282,7 +282,6 @@ $(LIBFT) :
 
 $(UNIT) :
 	@make -C $(UNIT_DIR)
-	@#echo "\033[1;31m-- CURQUITEST OBJ --------------\033[0m"
 	@echo "Be patient... ;)"
 
 $(NAME) : $(PROJ) $(LIBFT) $(UNIT) $(OBJ)
@@ -292,7 +291,6 @@ $(NAME) : $(PROJ) $(LIBFT) $(UNIT) $(OBJ)
 
 %.o: %.c
 	@$(CC) -o $@ -c $< $(INCL_FLAG)
-	@#printf  "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 clean :
 	@make clean -C $(LIBFT_DIR)
