@@ -24,9 +24,10 @@ INCL_FLAG = -Iincludes -I$(LIB_DIR)/includes
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	@ar -x ../libft/libft.a
-	@ar rc $@ *.o $(OBJ)
-	@rm -rf *.o
+	@#ar -x ../libft/libft.a
+	@#ar rc $@ *.o $(OBJ)
+	@#rm -rf *.o
+	@ar rc $@ $^
 	@ranlib $@
 	@printf  "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 

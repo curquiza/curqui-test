@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   load_test.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 12:59:11 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 19:46:02 by curquiza         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libunit.h"
 
 static void		ft_testadd_back(t_test **alst, t_test *new)
@@ -36,11 +24,11 @@ static t_test	*ft_testnew(char *name, int (*f)(void))
 
 	new = ft_memalloc(sizeof(*new));
 	if (!name)
-		ft_memmove(new->name, DEF_NAME, ft_strlen(DEF_NAME));
+		memmove(new->name, DEF_NAME, strlen(DEF_NAME));
 	else
 	{
-		len = (ft_strlen(name) < MAX_NAME_LEN ? ft_strlen(name) : MAX_NAME_LEN);
-		ft_memmove(new->name, name, len);
+		len = (strlen(name) < MAX_NAME_LEN ? strlen(name) : MAX_NAME_LEN);
+		memmove(new->name, name, len);
 	}
 	new->fct = f;
 	return (new);

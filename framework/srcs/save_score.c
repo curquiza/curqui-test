@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   save_score.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/13 19:48:28 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 19:48:30 by curquiza         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libunit.h"
 
 static void		ft_scoreadd_back(t_score **alst, t_score *new)
@@ -36,11 +24,11 @@ static t_score	*ft_newscore(char *name, int success, int total)
 
 	new = ft_memalloc(sizeof(*new));
 	if (!name)
-		ft_memmove(new->name, DEF_NAME, ft_strlen(DEF_NAME));
+		memmove(new->name, DEF_NAME, strlen(DEF_NAME));
 	else
 	{
-		len = (ft_strlen(name) < MAX_NAME_LEN ? ft_strlen(name) : MAX_NAME_LEN);
-		ft_memmove(new->name, name, len);
+		len = (strlen(name) < MAX_NAME_LEN ? strlen(name) : MAX_NAME_LEN);
+		memmove(new->name, name, len);
 	}
 	new->success = success;
 	new->total = total;

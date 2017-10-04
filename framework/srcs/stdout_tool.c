@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   stdout_tool.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/13 19:48:37 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 19:49:01 by curquiza         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libunit.h"
 
 void	ft_connect_stdout(int *pfd, int *save)
@@ -31,13 +19,13 @@ char	*ft_get_stdout(int *pfd, int *save)
 	rslt = ft_strnew(0);
 	close(pfd[1]);
 	close(1);
-	ft_bzero(buff, READ_SIZE + 1);
+	bzero(buff, READ_SIZE + 1);
 	while (read(pfd[0], buff, READ_SIZE) > 0)
 	{
 		tmp = rslt;
 		rslt = ft_strjoin(tmp, buff);
 		ft_strdel(&tmp);
-		ft_bzero(buff, READ_SIZE + 1);
+		bzero(buff, READ_SIZE + 1);
 	}
 	close(pfd[0]);
 	dup2(*save, 1);

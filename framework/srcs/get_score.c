@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_score.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/13 19:48:08 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 19:48:17 by curquiza         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libunit.h"
 
 static void		ft_put_one_score(char *name, int success, int total, char *col)
@@ -18,7 +6,7 @@ static void		ft_put_one_score(char *name, int success, int total, char *col)
 
 	ft_putstr_col(BEFORE_SCORE_NAME, col, DEF);
 	ft_putstr_col(name, col, DEF);
-	i = ft_strlen(name);
+	i = strlen(name);
 	while (i < MAX_NAME_LEN)
 	{
 		ft_putchar(' ');
@@ -38,7 +26,7 @@ static void		ft_put_score(t_score *score)
 	col = NULL;
 	while (score)
 	{
-		col = ft_strdup((score->success == score->total ? GREEN : RED));
+		col = strdup((score->success == score->total ? GREEN : RED));
 		ft_put_one_score(score->name, score->success, score->total, col);
 		ft_strdel(&col);
 		score = score->next;
@@ -62,7 +50,7 @@ int				ft_get_final_score(t_score **score)
 		total += tmp->total;
 		tmp = tmp->next;
 	}
-	col = ft_strdup((success == total ? GREEN : RED));
+	col = strdup((success == total ? GREEN : RED));
 	ft_putstr(BEFORE_SCORE_NAME);
 	ft_putendl_col("----------------------------", B_YELLOW, DEF);
 	ft_put_one_score("TOTAL", success, total, col);
