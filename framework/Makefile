@@ -11,8 +11,7 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  launch_tests.c \
 	  del_lst.c \
 	  stdout_tool.c \
-	  save_score.c \
-	  get_score.c)
+	  save_score.c)
 
 DIR_OBJ = objs
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
