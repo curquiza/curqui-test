@@ -4,6 +4,11 @@
 ** TOOLS ***********************************************************************
 */
 
+static void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 static void	ft_putstr(char const *s)
 {
 	if (s)
@@ -21,18 +26,18 @@ static void	ft_putnbr(int n)
 {
 	if (n / 10 == 0 && n % 10 < 0)
 	{
-		putchar('-');
-		putchar(-1 * (n % 10) + '0');
+		ft_putchar('-');
+		ft_putchar(-1 * (n % 10) + '0');
 	}
 	else if (n / 10 == 0)
-		putchar(n % 10 + '0');
+		ft_putchar(n % 10 + '0');
 	else
 	{
 		ft_putnbr(n / 10);
 		if (n < 0)
-			putchar(-1 * (n % 10) + '0');
+			ft_putchar(-1 * (n % 10) + '0');
 		else
-			putchar(n % 10 + '0');
+			ft_putchar(n % 10 + '0');
 	}
 }
 
@@ -52,10 +57,10 @@ static void	ft_putname(t_test *test)
 	i = strlen(test->name);
 	while (i < MAX_NAME_LEN)
 	{
-		putchar(' ');
+		ft_putchar(' ');
 		i++;
 	}
-	putchar('\t');
+	ft_putchar('\t');
 }
 
 /*
@@ -83,7 +88,7 @@ void		ft_putnbrtests(int cnt_success, int cnt_total)
 {
 	char	*col;
 
-	putchar('\n');
+	ft_putchar('\n');
 	if (cnt_total == cnt_success)
 		col = strdup(GREEN);
 	else
@@ -109,14 +114,14 @@ static void		ft_put_one_score(char *name, int success, int total, char *col)
 	i = strlen(name);
 	while (i < MAX_NAME_LEN)
 	{
-		putchar(' ');
+		ft_putchar(' ');
 		i++;
 	}
-	putchar(' ');
+	ft_putchar(' ');
 	ft_putnbr_col(success, col, DEF);
 	ft_putstr_col("/", col, DEF);
 	ft_putnbr_col(total, col, DEF);
-	putchar('\n');
+	ft_putchar('\n');
 }
 
 static void		ft_put_score(t_score *score)

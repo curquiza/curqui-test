@@ -18,6 +18,10 @@ typedef struct	s_data
 
 int				ft_printf(char *s, ...);
 
+void			ft_putstr(char const *s);
+void			ft_putstr_col(char *str, char *color, char *colreset);
+void			ft_putendl_col(char *str, char *color, char *colreset);
+
 int				basics_launcher(int *success, int *total);
 int				conv_d_i_bigd_launcher(int *success, int *total);
 int				conv_p_launcher(int *success, int *total);
