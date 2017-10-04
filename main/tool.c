@@ -3,7 +3,7 @@
 void	ft_putstr(char const *s)
 {
 	if (s)
-		write(1, s, ft_strlen(s));
+		write(1, s, strlen(s));
 }
 
 void	ft_putstr_col(char *str, char *color, char *colreset)
@@ -24,7 +24,7 @@ void	ft_putendl(char const *s)
 {
 	if (s)
 	{
-		write(1, s, ft_strlen(s));
+		write(1, s, strlen(s));
 		write(1, "\n", 1);
 	}
 }

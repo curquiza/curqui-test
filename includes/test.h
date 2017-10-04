@@ -1,10 +1,13 @@
 #ifndef TEST_H
 # define TEST_H
 
-# include "libft.h"
 # include "libunit.h"
 # include <wchar.h>
 # include <locale.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
+
 
 # define NB_TEST_TYPE 13
 

@@ -270,22 +270,16 @@ UNIT = $(UNIT_DIR)/libunit.a
 
 PROJ = libftprintf.a
 
-LIBFT_DIR = libft
-LIBFT = $(LIBFT_DIR)/libft.a
-
-INCL_FLAG = -I includes -I $(LIBFT_DIR)/includes -I $(UNIT_DIR)/includes -I $(PROJ_DIR)/includes
+INCL_FLAG = -I includes  -I $(UNIT_DIR)/includes
 LIB_FLAG = -L. -lftprintf -L$(UNIT_DIR) -lunit
 
 all : $(NAME)
-
-$(LIBFT) :
-	@make -C $(LIBFT_DIR)
 
 $(UNIT) :
 	@make -C $(UNIT_DIR)
 	@echo "Be patient... ;)"
 
-$(NAME) : $(PROJ) $(LIBFT) $(UNIT) $(OBJ)
+$(NAME) : $(PROJ) $(UNIT) $(OBJ)
 	@$(CC) $(OBJ) -o $@ $(LIB_FLAG)
 	@echo "\033[1;31m-- CURQUITEST EXEC -------------\033[0m"
 	@printf  "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
@@ -294,12 +288,10 @@ $(NAME) : $(PROJ) $(LIBFT) $(UNIT) $(OBJ)
 	@$(CC) -o $@ -c $< $(INCL_FLAG)
 
 clean :
-	@make clean -C $(LIBFT_DIR)
 	@make clean -C $(UNIT_DIR)
 	@rm -f $(OBJ)
 
 fclean : clean
-	@make fclean -C $(LIBFT_DIR)
 	@make fclean -C $(UNIT_DIR)
 	@rm -f $(NAME)
 

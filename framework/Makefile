@@ -16,9 +16,7 @@ SRC = $(addprefix $(DIR_SRC)/, \
 DIR_OBJ = objs
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
 
-LIB_DIR = ../libft
-
-INCL_FLAG = -Iincludes -I$(LIB_DIR)/includes
+INCL_FLAG = -Iincludes
 
 all : $(NAME)
 
