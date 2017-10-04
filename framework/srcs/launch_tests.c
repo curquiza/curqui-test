@@ -24,7 +24,7 @@ static void	ft_fork_and_exec(t_test *tmp)
 
 	status = 0;
 	if ((process = fork()) == -1)
-		ft_exit("fork error", 2);
+		exit(1);
 	if (process > 0)
 	{
 		wait(&status);

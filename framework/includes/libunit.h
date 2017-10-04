@@ -6,14 +6,16 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 11:54:39 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 19:50:54 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/10/04 12:35:46 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBUNIT_H
 # define LIBUNIT_H
 
-# include "libft.h"
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
 # include <sys/wait.h>
 # include <sys/signal.h>
 # include <stdio.h>
@@ -25,6 +27,26 @@
 # define DEF_NAME "test"
 # define BEFORE_TEST_NAME "       "
 # define BEFORE_SCORE_NAME "       "
+
+/*
+** Colors
+*/
+
+# define DEF "\033[0m"
+# define BLACK "\x1b[30m"
+# define RED "\x1b[31m"
+# define B_RED "\x1b[1;31m"
+# define GREEN "\x1b[32m"
+# define B_GREEN "\x1b[1;32m"
+# define YELLOW "\x1b[33m"
+# define B_YELLOW "\x1b[1;33m"
+# define BLUE "\x1b[34m"
+# define B_BLUE "\x1b[1;34m"
+# define PINK "\x1b[35m"
+# define B_PINK "\x1b[1;35m"
+# define CYAN "\x1b[36m"
+# define B_CYAN "\x1b[1;36m"
+# define WHITE "\x1b[37m"
 
 /*
 ** Structures

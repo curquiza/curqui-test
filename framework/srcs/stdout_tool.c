@@ -1,12 +1,39 @@
 #include "libunit.h"
 
+char	*ft_strnew(size_t size)
+{
+	char	*str;
+
+	if (!(str = (char *)malloc(sizeof(*str) * (size + 1))))
+		exit(1);
+	str[size] = '\0';
+	while (size--)
+		str[size] = '\0';
+	return (str);
+}
+
+static char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*tmp;
+
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+		return (strdup(s2));
+	if (!s2)
+		return (strdup(s1));
+	tmp = ft_strnew(strlen(s1) + strlen(s2));
+	strcat(strcpy(tmp, s1), s2);
+	return (tmp);
+}
+
 void	ft_connect_stdout(int *pfd, int *save)
 {
 	*save = dup(1);
 	if (pipe(pfd) == -1)
-		ft_exit("pipe error", 2);
+		exit(1);
 	if (dup2(pfd[1], 1) == -1)
-		ft_exit("dup2 error", 2);
+		exit(1);
 }
 
 char	*ft_get_stdout(int *pfd, int *save)
@@ -24,7 +51,7 @@ char	*ft_get_stdout(int *pfd, int *save)
 	{
 		tmp = rslt;
 		rslt = ft_strjoin(tmp, buff);
-		ft_strdel(&tmp);
+		free(tmp);
 		bzero(buff, READ_SIZE + 1);
 	}
 	close(pfd[0]);
