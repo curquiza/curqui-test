@@ -1,5 +1,9 @@
 #include "libunit.h"
 
+/*
+** TOOLS ***********************************************************************
+*/
+
 static void	ft_putstr(char const *s)
 {
 	if (s)
@@ -54,6 +58,10 @@ static void	ft_putname(t_test *test)
 	putchar('\t');
 }
 
+/*
+** RESULT FUNCTIONS ************************************************************
+*/
+
 void		ft_putrslt(t_test *test)
 {
 	ft_putname(test);
@@ -88,6 +96,10 @@ void		ft_putnbrtests(int cnt_success, int cnt_total)
 	free(col);
 }
 
+/*
+** FINAL SCORE *****************************************************************
+*/
+
 static void		ft_put_one_score(char *name, int success, int total, char *col)
 {
 	int		i;
@@ -121,7 +133,7 @@ static void		ft_put_score(t_score *score)
 	}
 }
 
-int				ft_put_final_score(t_score **score)
+int				ft_get_final_score(t_score **score)
 {
 	int		success;
 	int		total;
