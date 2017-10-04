@@ -5,7 +5,8 @@ CC = gcc -Wall -Wextra -Werror
 #CC = gcc -Wall -Wextra -Werror -g -fsanitize=address
 
 SRC = $(addprefix main/, \
-	  main.c) \
+	  main.c \
+	  tool.c) \
 	  $(addprefix basics/, \
 	  a00_launcher.c \
 	  a01_test_01.c \

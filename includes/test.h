@@ -20,7 +20,10 @@ int				ft_printf(char *s, ...);
 
 void			ft_putstr(char const *s);
 void			ft_putstr_col(char *str, char *color, char *colreset);
+void			ft_putendl(char const *s);
 void			ft_putendl_col(char *str, char *color, char *colreset);
+int				ft_strcmp(const char *s1, const char *s2);
+void			ft_strdel(char **as);
 
 int				basics_launcher(int *success, int *total);
 int				conv_d_i_bigd_launcher(int *success, int *total);

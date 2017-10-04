@@ -1,33 +1,5 @@
 #include "test.h"
 
-/*
-** TOOLS ***********************************************************************
-*/
-
-void	ft_putstr(char const *s)
-{
-	if (s)
-		write(1, s, ft_strlen(s));
-}
-
-void	ft_putstr_col(char *str, char *color, char *colreset)
-{
-	ft_putstr(color);
-	ft_putstr(str);
-	ft_putstr(colreset);
-}
-
-void	ft_putendl_col(char *str, char *color, char *colreset)
-{
-	ft_putstr(color);
-	ft_putstr(str);
-	ft_putendl(colreset);
-}
-
-/*
-** MAIN ************************************************************************
-*/
-
 static void	ft_init_ftab(int (**f)(int *, int *))
 {
 	f[0] = &basics_launcher;
