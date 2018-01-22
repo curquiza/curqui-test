@@ -241,7 +241,8 @@ SRC = $(addprefix main/, \
 	  a32_all_04.c \
 	  a33_precision_06.c \
 	  a34_precision_07.c \
-	  a35_all_05.c) \
+	  a35_all_05.c \
+	  a36_all_06.c) \
 	  $(addprefix mixed/, \
 	  a00_launcher.c \
 	  a01_test_01.c \
