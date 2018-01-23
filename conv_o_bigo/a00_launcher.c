@@ -42,5 +42,6 @@ int		conv_o_bigo_launcher(int *success, int *total)
 	ft_load_test(&test, "all_03", &o_all_03);
 	ft_load_test(&test, "all_04", &o_all_04);
 	ft_load_test(&test, "all_05", &o_all_05);
+	ft_load_test(&test, "all_06", &o_all_06);
 	return(ft_launch_tests(&test, success, total));
 }

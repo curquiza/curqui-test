@@ -40,5 +40,6 @@ int		x_all_04(void);
 int		x_all_05(void);
 int		x_all_06(void);
 int		x_all_07(void);
+int		x_all_08(void);
 
 #endif

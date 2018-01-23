@@ -38,5 +38,6 @@ int		o_all_02(void);
 int		o_all_03(void);
 int		o_all_04(void);
 int		o_all_05(void);
+int		o_all_06(void);
 
 #endif
