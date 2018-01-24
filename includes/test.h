@@ -11,14 +11,6 @@
 
 # define NB_TEST_TYPE 13
 
-typedef struct	s_data
-{
-	int		r1;
-	int		r2;
-	char	*s1;
-	char	*s2;
-}				t_data;
-
 int				ft_printf(char *s, ...);
 
 void			ft_putstr(char const *s);

@@ -19,6 +19,15 @@
 # include <sys/wait.h>
 # include <sys/signal.h>
 # include <stdio.h>
+# include <fcntl.h>
+
+typedef struct	s_data
+{
+	int		r1;
+	int		r2;
+	char	*s1;
+	char	*s2;
+}				t_data;
 
 # define READ_SIZE 10
 # define SEC_FACT 1000000
@@ -88,5 +97,7 @@ int					ft_get_final_score(t_score **score);
 
 void				ft_putrslt(t_test *test);
 void				ft_putnbrtests(int cnt_success, int cnt_total);
+
+void				ft_write_debug(char *str_test, t_data data, int ret);
 
 #endif
