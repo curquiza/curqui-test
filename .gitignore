@@ -1,4 +1,5 @@
 **/**/*.swp
 **/**/*.o
 **/**/*.a
+**/**/rslt_trace.txt
 ft_printf_tests
