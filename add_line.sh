@@ -5,9 +5,8 @@ insert_line() {
 	echo "ft_write_debug($str_test, data, ret); in $1"
 
 	sed -i '' "s/ft_strdel(&data.s1);/ft_write_debug($str_test, data, ret);\\
-		ft_strdel(\&data.s1);/"\
-		$1
-		#conv_bigc/a01_basic_01.c
+	ft_strdel(\&data.s1);/" \
+	$1
 }
 files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o -name "mixed" \) \
 	-exec find {} -name "*.c" \;`
