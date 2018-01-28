@@ -8,12 +8,10 @@ int		u_all_02(void)
 	int		save_stdout;
 
 	ft_connect_stdout(pfd, &save_stdout);
-	data.r1 = ft_printf("\ntoto et %00009U%-2lu mimi et titi%--14u", 0,
-						(unsigned long)14, 200);
+	data.r1 = ft_printf("\ntoto et %00009U%-2lu mimi et titi%--14u", 0, (unsigned long)14, 200);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
 	ft_connect_stdout(pfd, &save_stdout);
-	data.r2 = printf("\ntoto et %00009U%-2lu mimi et titi%--14u", 0,
-						(unsigned long)14, 200);
+	data.r2 = printf("\ntoto et %00009U%-2lu mimi et titi%--14u", 0, (unsigned long)14, 200);
 	data.s2 = ft_get_stdout(pfd, &save_stdout);
 	ret = 0;
 	if (data.r1 != data.r2)

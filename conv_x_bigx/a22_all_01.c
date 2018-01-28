@@ -8,8 +8,7 @@ int		x_all_01(void)
 	int		save_stdout;
 
 	ft_connect_stdout(pfd, &save_stdout);
-	data.r1 = ft_printf("test%---10.6x et %01hhX !!\n", 0xaabb,
-														(unsigned char)0);
+	data.r1 = ft_printf("test%---10.6x et %01hhX !!\n", 0xaabb, (unsigned char)0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r2 = printf("test%---10.6x et %01hhX !!\n", 0xaabb, (unsigned char)0);
