@@ -19,6 +19,7 @@ int		bigc_all_01(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("%8C et coco %C titi %lc, 3250, 0x11ffff, 'a'", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

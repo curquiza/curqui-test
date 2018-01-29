@@ -18,6 +18,7 @@ int		mix_test_03(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("%-+-12.7Dt%0 4i %04.2% et %lc titi, 125, 124, 256", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

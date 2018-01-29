@@ -18,6 +18,7 @@ int		o_modifiers_04(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("%llo, (unsigned long long)-127", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

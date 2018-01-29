@@ -18,6 +18,7 @@ int		d_all_04(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("% 20.12ld et % 05D% 4.8hi !, 0x11ffaa147, 24, (short)-2345", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

@@ -18,6 +18,7 @@ int		mix_test_04(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("test%-8p %---32p %#5.3x%#024X, ft_strdel(&data.s1);ret, ft_strdel(&data.s1);ret, 0x25, 0", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

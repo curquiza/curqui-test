@@ -1,5 +1,5 @@
 insert_line() {
-	str_test=`grep 'ft_printf' < $1 | cut -d "(" -f 2 | tr -d ');' | tr -d '"'`
+	str_test=`grep 'ft_printf' < $1 | cut -c 22- | sed 's/);//g' | tr -d '"'`
 	str_test=\"$str_test\"
 
 	echo "ft_write_debug($str_test, data, ret); in $1"
@@ -8,6 +8,7 @@ insert_line() {
 	ft_strdel(\&data.s1);/" \
 	$1
 }
+
 files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o -name "mixed" \) \
 	-exec find {} -name "*.c" \;`
 

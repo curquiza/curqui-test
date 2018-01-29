@@ -18,6 +18,7 @@ int		mix_test_01(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("test %-12i et %--2.4s %24s !\\n, 0, NULL, cooc", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

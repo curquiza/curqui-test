@@ -18,6 +18,7 @@ int		u_all_04(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("%05.1u %3.4hu %-4.7U, 45, (unsigned short)-1789, 147", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

@@ -19,6 +19,7 @@ int		mix_test_05(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("test %-7C %007d%-10.2ls!!, 0xd777, 0x45, L〻", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

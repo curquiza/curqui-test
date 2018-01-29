@@ -18,6 +18,7 @@ int		s_all_03(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_debug("%1.4s et %-6.8s et %4.2s, tuuu, 12345, hu", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);
