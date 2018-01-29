@@ -15,3 +15,5 @@ files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o 
 for i in $files; do
 	insert_line $i
 done
+
+#grep 'write_debug' < conv_s/a14_all_02.c | cut -d '"' -f 2 | cut -d ',' -f 1 | sed -i '' 's/^/\\\"/;s/$/\\\"/'
