@@ -9,8 +9,8 @@ insert_line() {
 }
 
 delete_line() {
-	line=`grep "ft_write_debug" conv_bigs/a01_basic_01.c`
-	sed -i '' "s/$line//" conv_bigs/a01_basic_01.c
+	line=`grep "ft_write_debug" $1
+	sed "/$line/d" $1
 }
 
 #action_on_file() {
