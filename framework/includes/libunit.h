@@ -98,6 +98,7 @@ int					ft_get_final_score(t_score **score);
 void				ft_putrslt(t_test *test);
 void				ft_putnbrtests(int cnt_success, int cnt_total);
 
-void				ft_write_debug(char *str_test, t_data data, int ret);
+void				ft_write_test_name(char *str_test);
+void				ft_write_rslt(t_data data, int ret);
 
 #endif
