@@ -2,8 +2,8 @@ insert_line() {
 	str_test=`grep 'ft_printf' < $1 | cut -c 22- | sed 's/);//g' | tr -d '"'`
 	str_test=\"$str_test\"
 
-	sed -i '' -e "1,/ft_connect_stdout/ s/ft_connect_stdout;/ft_write_debug($str_test, data, ret);\\
-	ft_connect_stdout;/" \
+	sed -i '' "1,/ft_connect_stdout/ s/ft_connect_stdout/ft_write_debug($str_test, data, ret);\\
+	ft_connect_stdout/" \
 	$1
 	echo "ft_write_debug($str_test, data, ret); in $1"
 }
@@ -17,6 +17,8 @@ insert_line() {
 	
 	#insert_line $1
 #}
+
+insert_line $1
 
 #files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o -name "mixed" \) \
 #	-exec find {} -name "*.c" \;`
