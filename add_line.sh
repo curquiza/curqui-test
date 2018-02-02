@@ -9,8 +9,8 @@ insert_line_test() {
 }
 
 insert_line_rslt() {
-	sed -i '' "1,/ft_connect_stdout/ s/ft_connect_stdout/ft_write_rslt(data, ret);\\
-	ft_connect_stdout/" \
+	sed -i '' "1,/ft_strdel/ s/ft_strdel/ft_write_rslt(data, ret);\\
+	ft_strdel/" \
 	$1
 	echo "ft_write_debug(data, ret); in $1"
 }
@@ -33,10 +33,9 @@ files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o 
 	-exec find {} -name "*.c" \;`
 
 for i in $files; do
-	delete_line $i
-#	insert_line $i
+	#delete_line $i
+	insert_line_rslt $i
 done
-echo $i
 
 ### Add '\"' but sed -i  doesn't work after the grep
 #grep 'write_debug' < conv_s/a14_all_02.c | cut -d '"' -f 2 | cut -d ',' -f 1 | sed -i '' 's/^/\\\"/;s/$/\\\"/'
