@@ -10,13 +10,14 @@ insert_line() {
 
 delete_line() {
 	line=`grep "ft_write_debug" $1`
-	sed "/$line/d" $1
+	sed -i '' "/$line/d" $1
 }
 
 files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o -name "mixed" \) \
 	-exec find {} -name "*.c" \;`
 
 for i in $files; do
+	delete_line $i
 	insert_line $i
 done
 
