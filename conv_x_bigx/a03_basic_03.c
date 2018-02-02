@@ -7,7 +7,7 @@ int		x_basic_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%x, 0xa0ffff");
+	ft_write_test_name("%x, 0xa0ffff");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%x", 0xa0ffff);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

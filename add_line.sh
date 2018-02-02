@@ -21,6 +21,11 @@ delete_line() {
 	echo "line removed from $1"
 }
 
+modify_line() {
+	sed -i '' "s/ft_write_debug/ft_write_test_name/" $1
+	echo "line corrected in $1"
+}
+
 count_debug() {
 	count=`grep ft_write_debug < $1 | wc -l`
 	if [ $count -gt 1 ]
@@ -35,7 +40,8 @@ files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o 
 for i in $files; do
 	#delete_line $i
 	#insert_line_rslt $i
-	insert_line_test $i
+	#insert_line_test $i
+	modify_line $i
 done
 
 ### Add '\"' but sed -i  doesn't work after the grep

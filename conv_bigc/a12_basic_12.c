@@ -7,7 +7,7 @@ int		bigc_basic_12(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%lc, 254");
+	ft_write_test_name("%lc, 254");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%lc", 254);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

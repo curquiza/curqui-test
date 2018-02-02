@@ -7,7 +7,7 @@ int		s_padding_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%1s, hi");
+	ft_write_test_name("%1s, hi");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%1s", "hi");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

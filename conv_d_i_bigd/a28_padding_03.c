@@ -7,7 +7,7 @@ int		d_padding_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%-2i, -7");
+	ft_write_test_name("%-2i, -7");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%-2i", -7);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

@@ -7,7 +7,7 @@ int		d_modifiers_06(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%hd, (short)0x1789ffff");
+	ft_write_test_name("%hd, (short)0x1789ffff");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%hd", (short)0x1789ffff);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

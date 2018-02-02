@@ -7,7 +7,7 @@ int		d_precision_05(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%.5d, -421");
+	ft_write_test_name("%.5d, -421");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.5d", -421);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

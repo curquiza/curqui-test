@@ -7,7 +7,7 @@ int		o_precision_05(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%.24o, 12012");
+	ft_write_test_name("%.24o, 12012");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.24o", 12012);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

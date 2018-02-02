@@ -7,7 +7,7 @@ int		u_precision_06(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%.0U, 0");
+	ft_write_test_name("%.0U, 0");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.0U", 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

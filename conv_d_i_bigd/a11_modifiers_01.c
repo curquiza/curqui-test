@@ -7,7 +7,7 @@ int		d_modifiers_01(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%ld, 0x44ff551100");
+	ft_write_test_name("%ld, 0x44ff551100");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%ld", 0x44ff551100);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

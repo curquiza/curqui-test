@@ -7,7 +7,7 @@ int		x_all_06(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("osef ! %#9llX et %-12hhx, (unsigned long long)-1248759650, (unsigned char)-1478223695");
+	ft_write_test_name("osef ! %#9llX et %-12hhx, (unsigned long long)-1248759650, (unsigned char)-1478223695");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("osef ! %#9llX et %-12hhx", (unsigned long long)-1248759650, (unsigned char)-1478223695);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

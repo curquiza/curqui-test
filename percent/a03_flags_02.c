@@ -7,7 +7,7 @@ int		percent_flags_02(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%+%");
+	ft_write_test_name("%+%");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%+%");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

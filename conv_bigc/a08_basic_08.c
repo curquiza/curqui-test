@@ -8,7 +8,7 @@ int		bigc_basic_08(void)
 	int		save_stdout;
 
 	setlocale(LC_ALL, "");
-	ft_write_debug("%C, 0xd800");
+	ft_write_test_name("%C, 0xd800");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%C", 0xd800);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

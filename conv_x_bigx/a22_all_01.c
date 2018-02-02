@@ -7,7 +7,7 @@ int		x_all_01(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("test%---10.6x et %01hhX !!\\n, 0xaabb, (unsigned char)0");
+	ft_write_test_name("test%---10.6x et %01hhX !!\\n, 0xaabb, (unsigned char)0");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("test%---10.6x et %01hhX !!\n", 0xaabb, (unsigned char)0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

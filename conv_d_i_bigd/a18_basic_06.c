@@ -7,7 +7,7 @@ int		d_basic_06(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%D, 0xff11ff11ff88");
+	ft_write_test_name("%D, 0xff11ff11ff88");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%D", 0xff11ff11ff88);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

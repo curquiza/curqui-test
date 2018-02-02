@@ -12,7 +12,7 @@ int		bigs_padding_04(void)
 	s[1] = 250;
 	s[2] = 'b';
 	s[3] = '\0';
-	ft_write_debug("%-4S, s");
+	ft_write_test_name("%-4S, s");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%-4S", s);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

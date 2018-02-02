@@ -8,7 +8,7 @@ int		bigc_padding_02(void)
 	int		save_stdout;
 
 	setlocale(LC_ALL, "");
-	ft_write_debug("%-8C, 1350");
+	ft_write_test_name("%-8C, 1350");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%-8C", 1350);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

@@ -7,7 +7,7 @@ int		o_all_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("\\n%024hho et%#1.2o %0012.O, (unsigned char)12, 0, 123654789");
+	ft_write_test_name("\\n%024hho et%#1.2o %0012.O, (unsigned char)12, 0, 123654789");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("\n%024hho et%#1.2o %0012.O", (unsigned char)12, 0, 123654789);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

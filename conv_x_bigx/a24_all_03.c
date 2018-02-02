@@ -7,7 +7,7 @@ int		x_all_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("toto %0##0.4X%#4.2xet c'est fini \\n, 0x037a, 0x9e");
+	ft_write_test_name("toto %0##0.4X%#4.2xet c'est fini \\n, 0x037a, 0x9e");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("toto %0##0.4X%#4.2xet c'est fini \n", 0x037a, 0x9e);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

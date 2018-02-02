@@ -7,7 +7,7 @@ int		c_padding_01(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%4c, 'U'");
+	ft_write_test_name("%4c, 'U'");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%4c", 'U');
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

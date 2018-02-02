@@ -7,7 +7,7 @@ int		o_modifiers_04(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%llo, (unsigned long long)-127");
+	ft_write_test_name("%llo, (unsigned long long)-127");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%llo", (unsigned long long)-127);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

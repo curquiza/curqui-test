@@ -7,7 +7,7 @@ int		x_padding_07(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%20x, 0x123456bc");
+	ft_write_test_name("%20x, 0x123456bc");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%20x", 0x123456bc);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

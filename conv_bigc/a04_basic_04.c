@@ -8,7 +8,7 @@ int		bigc_basic_04(void)
 	int		save_stdout;
 
 	setlocale(LC_ALL, "");
-	ft_write_debug("%lc, 0x40501");
+	ft_write_test_name("%lc, 0x40501");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%lc", 0x40501);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

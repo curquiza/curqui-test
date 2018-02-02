@@ -12,7 +12,7 @@ int		bigs_basic_04(void)
 	s[1] = 256;
 	s[2] = 'b';
 	s[3] = '\0';
-	ft_write_debug("%S, s");
+	ft_write_test_name("%S, s");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%S", s);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

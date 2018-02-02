@@ -7,7 +7,7 @@ int		o_modifiers_05(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%zo, 0xffff14785aa");
+	ft_write_test_name("%zo, 0xffff14785aa");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%zo", 0xffff14785aa);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

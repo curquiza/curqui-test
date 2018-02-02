@@ -12,7 +12,7 @@ int		bigs_precision_07(void)
 	s[1] = 254;
 	s[2] = 'u';
 	s[3] = '\0';
-	ft_write_debug("%.2ls, s");
+	ft_write_test_name("%.2ls, s");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.2ls", s);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
