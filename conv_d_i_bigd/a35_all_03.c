@@ -7,6 +7,7 @@ int		d_all_03(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%20.ld et %.4hhi !, 0x11ffaa147, (signed char)-8");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%20.ld et %.4hhi !", 0x11ffaa147, (signed char)-8);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

@@ -7,6 +7,7 @@ int		o_all_02(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("t%04.2o%#2oet %#-8.3o titi, 0, 0, 0");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("t%04.2o%#2oet %#-8.3o titi", 0, 0, 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

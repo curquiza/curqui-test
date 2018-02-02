@@ -7,6 +7,7 @@ int		x_all_08(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%0#10.0x %0#x, 12345, 0");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%0#10.0x %0#x", 12345, 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

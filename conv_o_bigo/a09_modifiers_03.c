@@ -7,6 +7,7 @@ int		o_modifiers_03(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%lo, (unsigned long)258");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%lo", (unsigned long)258);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

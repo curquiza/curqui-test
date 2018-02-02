@@ -12,6 +12,7 @@ int		bigs_padding_05(void)
 	s[1] = 256;
 	s[2] = 'b';
 	s[3] = '\0';
+	ft_write_debug("%9ls, s");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%9ls", s);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

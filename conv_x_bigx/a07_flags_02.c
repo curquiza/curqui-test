@@ -7,6 +7,7 @@ int		x_flags_02(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%#x, 0x78aa");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%#x", 0x78aa);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

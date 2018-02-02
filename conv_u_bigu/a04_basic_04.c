@@ -7,6 +7,7 @@ int		u_basic_04(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%U, 231009999");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%U", 231009999);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

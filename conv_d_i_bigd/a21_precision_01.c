@@ -7,6 +7,7 @@ int		d_precision_01(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%.12d, 1144");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.12d", 1144);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

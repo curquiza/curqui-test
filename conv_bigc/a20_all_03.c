@@ -8,6 +8,7 @@ int		bigc_all_03(void)
 	int		save_stdout;
 
 	setlocale(LC_ALL, "");
+	ft_write_debug("%6C et coco %C titi %C tyty, 3250, 0xd800, 'u'");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%6C et coco %C titi %C tyty", 3250, 0xd800, 'u');
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

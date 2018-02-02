@@ -7,6 +7,7 @@ int		x_all_02(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("t %#7.5X%0006.2x et %lX!, 0xab, 0x876, 0xff11ff11ff1");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("t %#7.5X%0006.2x et %lX!", 0xab, 0x876, 0xff11ff11ff1);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

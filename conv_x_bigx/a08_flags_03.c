@@ -7,6 +7,7 @@ int		x_flags_03(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%#X, 0xff7744");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%#X", 0xff7744);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

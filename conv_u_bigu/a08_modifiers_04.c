@@ -7,6 +7,7 @@ int		u_modifiers_04(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%llu, (unsigned long long)-12345612220");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%llu", (unsigned long long)-12345612220);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

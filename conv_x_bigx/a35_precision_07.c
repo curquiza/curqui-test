@@ -7,6 +7,7 @@ int		x_precision_07(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%.7X, 0xaa");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.7X", 0xaa);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

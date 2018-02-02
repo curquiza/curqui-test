@@ -7,6 +7,7 @@ int		mix_test_04(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("test%-8p %---32p %#5.3x%#024X, ft_connect_stdoutret, ft_connect_stdoutret, 0x25, 0");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("test%-8p %---32p %#5.3x%#024X", &ret, &ret, 0x25, 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

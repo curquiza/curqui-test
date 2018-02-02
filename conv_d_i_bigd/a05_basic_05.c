@@ -7,6 +7,7 @@ int		d_basic_05(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%d, -2147483647");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%d", -2147483647);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

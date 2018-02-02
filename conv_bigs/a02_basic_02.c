@@ -13,6 +13,7 @@ int		bigs_basic_02(void)
 	s[1] = 0xd800;
 	s[2] = 0x81000;
 	s[3] = '\0';
+	ft_write_debug("%S, s");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%S", s);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

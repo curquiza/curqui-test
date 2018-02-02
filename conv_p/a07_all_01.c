@@ -7,6 +7,7 @@ int		p_all_01(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%----24p et hello %2p %12p, ft_connect_stdoutret, ft_connect_stdoutp_all_01, NULL");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%----24p et hello %2p %12p", &ret, &p_all_01, NULL);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

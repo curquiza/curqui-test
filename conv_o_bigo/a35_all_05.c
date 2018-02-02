@@ -7,6 +7,7 @@ int		o_all_05(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("toto %###.0o%#.O et %#.1o !, 0, 0, 0");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("toto %###.0o%#.O et %#.1o !", 0, 0, 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

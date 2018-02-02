@@ -2,7 +2,7 @@ insert_line_test() {
 	str_test=`grep 'ft_printf' < $1 | cut -c 22- | sed 's/);//g' | tr -d '"'`
 	str_test=\"$str_test\"
 
-	sed -i '' "1,/ft_connect_stdout/ s/ft_connect_stdout/ft_write_debug($str_test);\\
+	sed -i '' "1,/ft_connect_stdout/ s/ft_connect_stdout/ft_write_test_name($str_test);\\
 	ft_connect_stdout/" \
 	$1
 	echo "ft_write_debug($str_test); in $1"
@@ -12,7 +12,7 @@ insert_line_rslt() {
 	sed -i '' "1,/ft_strdel/ s/ft_strdel/ft_write_rslt(data, ret);\\
 	ft_strdel/" \
 	$1
-	echo "ft_write_debug(data, ret); in $1"
+	echo "ft_write_rslt(data, ret); in $1"
 }
 
 delete_line() {
@@ -34,7 +34,8 @@ files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o 
 
 for i in $files; do
 	#delete_line $i
-	insert_line_rslt $i
+	#insert_line_rslt $i
+	insert_line_test $i
 done
 
 ### Add '\"' but sed -i  doesn't work after the grep

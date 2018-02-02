@@ -7,6 +7,7 @@ int		x_modifiers_07(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%zx, 65423000000");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%zx", 65423000000);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

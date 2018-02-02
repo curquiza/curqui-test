@@ -7,6 +7,7 @@ int		percent_padding_02(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%-4%");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%-4%");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

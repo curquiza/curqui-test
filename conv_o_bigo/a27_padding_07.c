@@ -7,6 +7,7 @@ int		o_padding_07(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%011o, 013");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%011o", 013);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

@@ -7,6 +7,7 @@ int		c_all_01(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("hello ca%----4c %1c va %10c%-c ??, '\\0', '\\n', (char)564, 0");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("hello ca%----4c %1c va %10c%-c ??", '\0', '\n', (char)564, 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

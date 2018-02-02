@@ -7,6 +7,7 @@ int		percent_all_01(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("titi % +---12.5% et%%%0004% et %+1%");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("titi % +---12.5% et%%%0004% et %+1%");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

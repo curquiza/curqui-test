@@ -7,6 +7,7 @@ int		c_basic_02(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%c, '0'");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%c", '\0');
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

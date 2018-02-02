@@ -7,6 +7,7 @@ int		x_modifiers_04(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%llX, (unsigned long long)0xaaffee11996677");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%llX", (unsigned long long)0xaaffee11996677);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
