@@ -7,6 +7,7 @@ int		s_all_02(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("u%4.2ss %-1.s\\n %---5.3s , coco, NULL, yooo", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("u%4.2ss %-1.s\n %---5.3s ", "coco", NULL, "yooo");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -18,7 +19,6 @@ int		s_all_02(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
-	ft_write_debug("u%4.2ss %-1.s\\n %---5.3s , coco, NULL, yooo", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

@@ -7,6 +7,7 @@ int		d_modifiers_01(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%ld, 0x44ff551100", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%ld", 0x44ff551100);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -18,7 +19,6 @@ int		d_modifiers_01(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
-	ft_write_debug("%ld, 0x44ff551100", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

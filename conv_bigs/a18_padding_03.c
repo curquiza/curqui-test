@@ -13,6 +13,7 @@ int		bigs_padding_03(void)
 	s[1] = 0x3abc;
 	s[2] = 0x81000;
 	s[3] = '\0';
+	ft_write_debug("%-12S, s", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%-12S", s);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -24,7 +25,6 @@ int		bigs_padding_03(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
-	ft_write_debug("%-12S, s", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

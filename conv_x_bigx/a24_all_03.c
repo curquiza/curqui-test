@@ -7,6 +7,7 @@ int		x_all_03(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("toto %0##0.4X%#4.2xet c'est fini \\n, 0x037a, 0x9e", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("toto %0##0.4X%#4.2xet c'est fini \n", 0x037a, 0x9e);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -18,7 +19,6 @@ int		x_all_03(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
-	ft_write_debug("toto %0##0.4X%#4.2xet c'est fini \\n, 0x037a, 0x9e", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

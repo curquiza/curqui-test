@@ -8,6 +8,7 @@ int		bigc_basic_09(void)
 	int		save_stdout;
 
 	setlocale(LC_ALL, "");
+	ft_write_debug("%C, 0xdb02", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%C", 0xdb02);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -19,7 +20,6 @@ int		bigc_basic_09(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
-	ft_write_debug("%C, 0xdb02", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

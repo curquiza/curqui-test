@@ -7,6 +7,7 @@ int		x_modifiers_01(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%hhx, (unsigned char)-10", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%hhx", (unsigned char)-10);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -18,7 +19,6 @@ int		x_modifiers_01(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
-	ft_write_debug("%hhx, (unsigned char)-10", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

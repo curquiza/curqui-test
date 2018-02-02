@@ -7,6 +7,7 @@ int		p_all_01(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_debug("%----24p et hello %2p %12p, ft_connect_stdoutret, ft_connect_stdoutp_all_01, NULL", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%----24p et hello %2p %12p", &ret, &p_all_01, NULL);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -18,7 +19,6 @@ int		p_all_01(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
-	ft_write_debug("%----24p et hello %2p %12p, ft_strdel(&data.s1);ret, ft_strdel(&data.s1);p_all_01, NULL", data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

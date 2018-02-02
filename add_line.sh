@@ -17,8 +17,14 @@ files=`find . -type d \( -name "conv_*" -o -name "basics" -o -name "percent" -o 
 	-exec find {} -name "*.c" \;`
 
 for i in $files; do
-	delete_line $i
-	insert_line $i
+#	delete_line $i
+#	insert_line $i
+	count=`grep ft_write_debug < $i | wc -l`
+	if [ $count -gt 1 ]
+	then
+		echo $i
+
+	fi
 done
 
 ### Add '\"' but sed -i  doesn't work after the grep
