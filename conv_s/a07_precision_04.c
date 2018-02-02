@@ -7,7 +7,6 @@ int		s_precision_04(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%.s, coco", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.s", "coco");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

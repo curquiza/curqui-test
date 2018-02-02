@@ -7,7 +7,6 @@ int		d_flags_05(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("% d, 0xff11ff", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("% d", 0xff11ff);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

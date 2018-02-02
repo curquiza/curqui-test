@@ -7,7 +7,6 @@ int		u_all_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("ko%-4.2hhu et %05.2u!, (unsigned char)-456, 0", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("ko%-4.2hhu et %05.2u!", (unsigned char)-456, 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

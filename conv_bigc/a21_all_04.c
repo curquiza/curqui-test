@@ -7,7 +7,6 @@ int		bigc_all_04(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("yo%2C%-12lc et %C titi %C tyty, 'u', 254, 256, 'a'", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("yo%2C%-12lc et %C titi %C tyty", 'u', 254, 256, 'a');
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

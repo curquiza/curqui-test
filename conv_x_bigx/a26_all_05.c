@@ -7,7 +7,6 @@ int		x_all_05(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%#.22zX et %020.14jx, 0xff1144ff1144, 0xffaabbccee", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%#.22zX et %020.14jx", 0xff1144ff1144, 0xffaabbccee);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

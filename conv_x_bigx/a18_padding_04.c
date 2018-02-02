@@ -7,7 +7,6 @@ int		x_padding_04(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%011X, 0xdd66", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%011X", 0xdd66);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

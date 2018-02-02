@@ -7,7 +7,6 @@ int		o_all_06(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("m%#.9od\\nee, 123456789", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("m%#.9od\nee", 123456789);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

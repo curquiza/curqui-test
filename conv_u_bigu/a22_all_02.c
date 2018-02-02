@@ -7,7 +7,6 @@ int		u_all_02(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("\\ntoto et %00009U%-2lu mimi et titi%--14u, 0, (unsigned long)14, 200", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("\ntoto et %00009U%-2lu mimi et titi%--14u", 0, (unsigned long)14, 200);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

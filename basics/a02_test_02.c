@@ -7,7 +7,6 @@ int		basics_test_02(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("coco\\net titi \\n", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("coco\net titi \n");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

@@ -7,7 +7,6 @@ int		d_modifiers_04(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%lld, (long long)-4278900", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%lld", (long long)-4278900);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

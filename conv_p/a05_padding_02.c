@@ -7,7 +7,6 @@ int		p_padding_02(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%-25p, ft_connect_stdoutdata", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%-25p", &data);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

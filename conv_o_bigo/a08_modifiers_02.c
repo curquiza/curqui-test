@@ -7,7 +7,6 @@ int		o_modifiers_02(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%ho, (unsigned short)1475", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%ho", (unsigned short)1475);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

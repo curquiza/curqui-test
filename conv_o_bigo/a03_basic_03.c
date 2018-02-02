@@ -7,7 +7,6 @@ int		o_basic_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%o, -123654789", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%o", -123654789);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

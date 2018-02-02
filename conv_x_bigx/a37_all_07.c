@@ -7,7 +7,6 @@ int		x_all_07(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("toto %##.0xet %#.X%###.1x, 0, 0, 0", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("toto %##.0xet %#.X%###.1x", 0, 0, 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

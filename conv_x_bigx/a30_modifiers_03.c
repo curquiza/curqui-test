@@ -7,7 +7,6 @@ int		x_modifiers_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%lx, 30000001245258745", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%lx", 30000001245258745);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

@@ -7,7 +7,6 @@ int		u_all_04(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%05.1u %3.4hu %-4.7U, 45, (unsigned short)-1789, 147", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%05.1u %3.4hu %-4.7U", 45, (unsigned short)-1789, 147);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

@@ -7,7 +7,6 @@ int		mix_test_01(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("test %-12i et %--2.4s %24s !\\n, 0, NULL, cooc", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("test %-12i et %--2.4s %24s !\n", 0, NULL, "cooc");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

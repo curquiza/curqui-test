@@ -7,7 +7,6 @@ int		u_padding_02(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%-12u, 17894", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%-12u", 17894);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

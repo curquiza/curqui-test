@@ -7,7 +7,6 @@ int		x_modifiers_06(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%jX, (uintmax_t)-1765423", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%jX", (uintmax_t)-1765423);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

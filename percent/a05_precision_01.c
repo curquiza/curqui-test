@@ -7,7 +7,6 @@ int		percent_precision_01(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%.8%", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.8%");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

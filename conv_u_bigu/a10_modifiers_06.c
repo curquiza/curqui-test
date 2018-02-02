@@ -7,7 +7,6 @@ int		u_modifiers_06(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%ju, (uintmax_t)2220", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%ju", (uintmax_t)2220);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

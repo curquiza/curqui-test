@@ -8,7 +8,6 @@ int		mix_test_05(void)
 	int		save_stdout;
 
 	setlocale(LC_ALL, "");
-	ft_write_debug("test %-7C %007d%-10.2ls!!, 0xd777, 0x45, L〻", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("test %-7C %007d%-10.2ls!!", 0xd777, 0x45, L"〻");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

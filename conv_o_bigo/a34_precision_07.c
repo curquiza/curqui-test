@@ -7,7 +7,6 @@ int		o_precision_07(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_debug("%.O, 0", data, ret);
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.O", 0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
