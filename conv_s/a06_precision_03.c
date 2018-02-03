@@ -7,7 +7,7 @@ int		s_precision_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_test_name("%.0s, coco et ti");
+	ft_write_test_name("%.0s, \"coco et ti\"");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.0s", "coco et ti");
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
