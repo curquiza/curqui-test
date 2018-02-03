@@ -7,7 +7,7 @@ int		p_basic_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_test_name("%p, ft_connect_stdoutp_basic_02");
+	ft_write_test_name("%p, &p_basic_02");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%p", &p_basic_02);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);

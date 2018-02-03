@@ -36,6 +36,7 @@ typedef struct	s_data
 # define DEF_NAME "test"
 # define BEFORE_TEST_NAME "       "
 # define BEFORE_SCORE_NAME "       "
+# define DEBUG_FILE_NAME "rslt_trace.txt"
 
 /*
 ** Colors
@@ -100,5 +101,7 @@ void				ft_putnbrtests(int cnt_success, int cnt_total);
 
 void				ft_write_test_name(char *str_test);
 void				ft_write_rslt(t_data data, int ret);
+void				ft_write_in_debug_file(t_test test);
+void				ft_write_title();
 
 #endif

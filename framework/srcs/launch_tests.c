@@ -50,6 +50,7 @@ int			ft_launch_tests(t_test **test, int *success, int *total)
 	{
 		ft_fork_and_exec(tmp);
 		ft_putrslt(tmp);
+		ft_write_in_debug_file(*tmp);
 		cnt_total++;
 		tmp->success == 0 ? cnt_success++ : 0;
 		tmp = tmp->next;
