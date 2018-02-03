@@ -13,6 +13,7 @@ int		bigs_basic_05(void)
 	s[1] = 256;
 	s[2] = 'b';
 	s[3] = '\0';
+	ft_write_test_name("%S, s");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%S", s);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -24,6 +25,7 @@ int		bigs_basic_05(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_rslt(data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

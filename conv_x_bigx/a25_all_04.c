@@ -7,6 +7,7 @@ int		x_all_04(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_test_name("cc%#.4X et %#0012x %#04hX !!, 0xaef, 0xe, (unsigned short)0");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("cc%#.4X et %#0012x %#04hX !!", 0xaef, 0xe, (unsigned short)0);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -18,6 +19,7 @@ int		x_all_04(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_rslt(data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

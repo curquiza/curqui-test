@@ -11,6 +11,7 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  launch_tests.c \
 	  del_lst.c \
 	  stdout_tool.c \
+	  debug_file.c \
 	  save_score.c)
 
 DIR_OBJ = objs

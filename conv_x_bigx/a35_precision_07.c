@@ -7,6 +7,7 @@ int		x_precision_07(void)
 	int		ret;
 	int		save_stdout;
 
+	ft_write_test_name("%.7X, 0xaa");
 	ft_connect_stdout(pfd, &save_stdout);
 	data.r1 = ft_printf("%.7X", 0xaa);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
@@ -18,6 +19,7 @@ int		x_precision_07(void)
 		ret = -1;
 	if (ft_strcmp(data.s1, data.s2))
 		ret = -1;
+	ft_write_rslt(data, ret);
 	ft_strdel(&data.s1);
 	ft_strdel(&data.s2);
 	return (ret);

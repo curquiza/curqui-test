@@ -61,6 +61,7 @@ int			main(void)
 	score = NULL;
 	ft_init_ftab(f);
 	ft_init_test_name(test_name);
+	ft_write_title();
 	ft_putstr("\n");
 	ft_putstr_col("*****************************************\n", B_YELLOW, DEF);
 	ft_putstr_col("********** PRINTF - CURQUITEST **********\n", B_YELLOW, DEF);
