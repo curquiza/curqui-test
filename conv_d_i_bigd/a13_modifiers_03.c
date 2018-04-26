@@ -7,12 +7,12 @@ int		d_modifiers_03(void)
 	int		ret;
 	int		save_stdout;
 
-	ft_write_test_name("%zi, 40000");
+	ft_write_test_name("%zi, (long)40000");
 	ft_connect_stdout(pfd, &save_stdout);
-	data.r1 = ft_printf("%zi", 40000);
+	data.r1 = ft_printf("%zi", (long)40000);
 	data.s1 = ft_get_stdout(pfd, &save_stdout);
 	ft_connect_stdout(pfd, &save_stdout);
-	data.r2 = printf("%zi", 40000);
+	data.r2 = printf("%zi", (long)40000);
 	data.s2 = ft_get_stdout(pfd, &save_stdout);
 	ret = 0;
 	if (data.r1 != data.r2)
