@@ -138,6 +138,13 @@ static void		ft_put_score(t_score *score)
 	}
 }
 
+void			ft_put_end_word(void)
+{
+	ft_putstr("\n To get all green tests doesn't mean your ft_printf is good.\n");
+	ft_putstr(" To get some red tests doesn't mean your ft_printf isn't good.\n");
+	ft_putstr("\n Good luck. ¯\\_(ツ)_/¯\n");
+}
+
 int				ft_get_final_score(t_score **score)
 {
 	int		success;
@@ -163,5 +170,6 @@ int				ft_get_final_score(t_score **score)
 	ft_putstr_col("----------------------------\n", B_YELLOW, DEF);
 	free(col);
 	ft_del_scorelst(score);
+	ft_put_end_word();
 	return (success == total ? 0 : -1);
 }
