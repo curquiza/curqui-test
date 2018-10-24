@@ -27,8 +27,6 @@ int		conv_o_bigo_launcher(int *success, int *total)
 	ft_load_test(&test, "precision_03", &o_precision_03);
 	ft_load_test(&test, "precision_04", &o_precision_04);
 	ft_load_test(&test, "precision_05", &o_precision_05);
-	ft_load_test(&test, "precision_06", &o_precision_05);
-	ft_load_test(&test, "precision_07", &o_precision_05);
 	ft_load_test(&test, "padding_01", &o_padding_01);
 	ft_load_test(&test, "padding_02", &o_padding_02);
 	ft_load_test(&test, "padding_03", &o_padding_03);
