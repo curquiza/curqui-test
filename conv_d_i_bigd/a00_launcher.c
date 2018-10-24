@@ -32,8 +32,6 @@ int		conv_d_i_bigd_launcher(int *success, int *total)
 	ft_load_test(&test, "precision_03", &d_precision_03);
 	ft_load_test(&test, "precision_04", &d_precision_04);
 	ft_load_test(&test, "precision_05", &d_precision_05);
-	ft_load_test(&test, "precision_06", &d_precision_05);
-	ft_load_test(&test, "precision_07", &d_precision_05);
 	ft_load_test(&test, "padding_01", &d_padding_01);
 	ft_load_test(&test, "padding_02", &d_padding_02);
 	ft_load_test(&test, "padding_03", &d_padding_03);
