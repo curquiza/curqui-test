@@ -42,5 +42,6 @@ int		d_all_02(void);
 int		d_all_03(void);
 int		d_all_04(void);
 int		d_all_05(void);
+int		d_all_06(void);
 
 #endif

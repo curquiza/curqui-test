@@ -44,5 +44,6 @@ int		conv_d_i_bigd_launcher(int *success, int *total)
 	ft_load_test(&test, "all_03", &d_all_03);
 	ft_load_test(&test, "all_04", &d_all_04);
 	ft_load_test(&test, "all_05", &d_all_05);
+	ft_load_test(&test, "all_06", &d_all_06);
 	return (ft_launch_tests(&test, success, total));
 }
