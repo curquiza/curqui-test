@@ -51,7 +51,8 @@ SRC = $(addprefix main/, \
 	  a36_all_04.c \
 	  a37_all_05.c \
 	  a38_precision_06.c \
-	  a39_precision_07.c) \
+	  a39_precision_07.c \
+	  a40_all_06.c) \
 	  $(addprefix conv_p/, \
 	  a00_launcher.c \
 	  a01_basic_01.c \
