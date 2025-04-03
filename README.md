@@ -1,4 +1,4 @@
-# Curqui_test #
+# Curqui-test #
 Tests for the ft_printf project of 42.
 
 ## Important
